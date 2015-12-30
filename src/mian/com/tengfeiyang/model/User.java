@@ -1,8 +1,24 @@
 package com.tengfeiyang.model;
 
 public class User {
+	private Integer id;
 	private String userName;
 	private String password;
+	private String email;
+	
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public String getUserName() {
 		return userName;
 	}

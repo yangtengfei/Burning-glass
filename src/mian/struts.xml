@@ -4,12 +4,23 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	
    <package name="burning-glass" extends="struts-default">
-   	<action name="user" class="com.tengfeiyang.action.UserAction">
+   
+   	<interceptors>
+  		<interceptor name="myInterceptor" class="com.tengfeiyang.interceptor.MyInterceptor"></interceptor>
+  		
+  		<interceptor-stack name="myDefaultStack">
+  			<interceptor-ref name="myInterceptor"></interceptor-ref>
+  			<interceptor-ref name="defaultStack"></interceptor-ref>
+  		</interceptor-stack>
+  	</interceptors>
+   
+   	<action name="user" class="com.tengfeiyang.action.LoginAction">
   		<result name="success">success.jsp</result>
   		<result name="error">fail.jsp</result>
+  		<result name="input">login.jsp</result>
+  		<interceptor-ref name="myDefaultStack"></interceptor-ref>
+  		
   	</action>
    </package>
-	
 </struts>

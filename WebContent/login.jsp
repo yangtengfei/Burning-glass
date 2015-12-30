@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,20 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="user" method="post">
-		<table>
-			<tr>
-				<td>用户名：</td>
-				<td><input type="text" name="userName" /></td>
-			</tr>
-			<tr>
-				<td>密     码：</td>
-				<td><input type="password" name="password" /></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" value="登录" /></td>
-			</tr>
-		</table>
-	</form>
+
+用户登录
+<s:form action="user" method="post">
+	<s:textfield name="userName" label="用户名"></s:textfield>
+	<s:textfield name="password" label="密码"></s:textfield>
+	<s:submit value="登录"></s:submit>
+</s:form>
 </body>
 </html>
