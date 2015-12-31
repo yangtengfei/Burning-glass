@@ -1,12 +1,28 @@
 package com.tengfeiyang.model;
 
+import java.util.Date;
+
 public class User {
 	private Integer id;
 	private String userName;
 	private String password;
 	private String email;
+	private Date createTime;
+	private Date modifyTime;
 	
 	
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	public Date getModifyTime() {
+		return modifyTime;
+	}
+	public void setModifyTime(Date modifyTime) {
+		this.modifyTime = modifyTime;
+	}
 	public Integer getId() {
 		return id;
 	}

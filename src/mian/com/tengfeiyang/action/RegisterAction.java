@@ -1,11 +1,13 @@
 package com.tengfeiyang.action;
 
+import java.util.Date;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.tengfeiyang.model.User;
 import com.tengfeiyang.service.UserService;
 import com.tengfeiyang.serviceImpl.UserServiceImpl;
 
-public class LoginAction extends ActionSupport {
+public class RegisterAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
 
@@ -13,6 +15,15 @@ public class LoginAction extends ActionSupport {
 	
 	private String userName;
 	private String password;
+	private String email;
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public String getUserName() {
 		return userName;
@@ -33,11 +44,19 @@ public class LoginAction extends ActionSupport {
 	// 重写 ActionSupport的 execute()方法
 	@Override
 	public String execute() throws Exception {
-		// 检查是否有该用户
-		User user = userService.getUser(userName, password);
-		if (user != null) {
+		// 检查用户名是否重复
+		User user = userService.getUser(userName);
+		if (user == null) {
+			User newUser = new User();
+			newUser.setUserName(userName);
+			newUser.setPassword(password);
+			newUser.setEmail(email);
+			newUser.setCreateTime(new Date());
+			newUser.setModifyTime(new Date());
+			userService.saveUser(newUser);
 			return SUCCESS;
 		} else {
+			// 用户名已
 			return ERROR;
 		}
 	}

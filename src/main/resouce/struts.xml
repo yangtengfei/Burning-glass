@@ -15,12 +15,18 @@
   		</interceptor-stack>
   	</interceptors>
    
-   	<action name="user" class="com.tengfeiyang.action.LoginAction">
+   	<action name="login" class="com.tengfeiyang.action.LoginAction">
   		<result name="success">success.jsp</result>
   		<result name="error">fail.jsp</result>
   		<result name="input">login.jsp</result>
   		<interceptor-ref name="myDefaultStack"></interceptor-ref>
-  		
+  	</action>
+  	
+  	<action name="register" class="com.tengfeiyang.action.RegisterAction">
+  		<result name="success">success.jsp</result>
+  		<result name="error">fail.jsp</result>
+  		<result name="input">register.jsp</result>
+  		<interceptor-ref name="myDefaultStack"></interceptor-ref>
   	</action>
    </package>
 </struts>
