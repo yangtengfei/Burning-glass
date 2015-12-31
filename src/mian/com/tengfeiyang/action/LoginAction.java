@@ -11,31 +11,22 @@ public class LoginAction extends ActionSupport {
 
 	private UserService userService = new UserServiceImpl();
 	
-	private String userName;
-	private String password;
+	private User user;
 
-	public String getUserName() {
-		return userName;
+	public User getUser() {
+		return user;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	// 重写 ActionSupport的 execute()方法
 	@Override
 	public String execute() throws Exception {
 		// 检查是否有该用户
-		User user = userService.getUser(userName, password);
-		if (user != null) {
+		User user1 = userService.getUser(user.getUserName(), user.getPassword());
+		if (user1 != null) {
 			return SUCCESS;
 		} else {
 			return ERROR;

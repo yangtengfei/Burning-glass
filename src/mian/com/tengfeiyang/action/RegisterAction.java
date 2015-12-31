@@ -13,44 +13,26 @@ public class RegisterAction extends ActionSupport {
 
 	private UserService userService = new UserServiceImpl();
 	
-	private String userName;
-	private String password;
-	private String email;
+	private User user;
 
-	public String getEmail() {
-		return email;
+	public User getUser() {
+		return user;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUser(User user) {
+		this.user = user;
 	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
+	
 	// 重写 ActionSupport的 execute()方法
 	@Override
 	public String execute() throws Exception {
 		// 检查用户名是否重复
-		User user = userService.getUser(userName);
-		if (user == null) {
+		User user2 = userService.getUser(user.getUserName());
+		if (user2 == null) {
 			User newUser = new User();
-			newUser.setUserName(userName);
-			newUser.setPassword(password);
-			newUser.setEmail(email);
+			newUser.setUserName(user.getUserName());
+			newUser.setPassword(user.getPassword());
+			newUser.setEmail(user.getEmail());
 			newUser.setCreateTime(new Date());
 			newUser.setModifyTime(new Date());
 			userService.saveUser(newUser);

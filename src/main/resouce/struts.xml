@@ -28,5 +28,12 @@
   		<result name="input">register.jsp</result>
   		<interceptor-ref name="myDefaultStack"></interceptor-ref>
   	</action>
+  	
+  	<action name="career_test" class="com.tengfeiyang.action.CareerTestAction">
+  		<result name="success">success.jsp</result>
+  		<result name="error">fail.jsp</result>
+  		<result name="input">login.jsp</result>
+  		<interceptor-ref name="myDefaultStack"></interceptor-ref>
+  	</action>
    </package>
 </struts>
