@@ -8,11 +8,11 @@
 </head>
 <body>
 <!-- 绝对路径：￥{pageContext.request.contextPath}/ -->
-职业测试<br>
-朋友评价你是下者中的：<br>
-<form action="career_test" method="post">
-	<input type="checkbox" name="options" value="A"/>A 热情和敏感
-	<input type="checkbox" name="options" value="B"/> B 逻辑和明确
+职业分析<br>
+您感兴趣的职业为：<br>
+<form action="java" method="post">
+	<input type="checkbox" name="options" value="A"/>A Java
+	<input type="checkbox" name="options" value="B"/> B 大数据
 	<input type="submit" value="提交"/>
 </form>
 </body>
