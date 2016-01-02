@@ -38,5 +38,10 @@
   		<result name="login">login.jsp</result>
   		<interceptor-ref name="myDefaultStack"></interceptor-ref>
   	</action>
+  	
+  		<action name="resume_*" class="com.tengfeiyang.action.ResumeManageAction" method="{1}">
+  		<result name="success">RESUME_MANAGE/success.jsp</result>
+  		<interceptor-ref name="myDefaultStack"></interceptor-ref>
+  	</action>
    </package>
 </struts>
