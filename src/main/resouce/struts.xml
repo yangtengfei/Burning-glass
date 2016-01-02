@@ -5,43 +5,58 @@
 
 <struts>
 
+	<!-- 开启动态方法调用，此方法有SQL注入的风险 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+
 	<include file="analysereport.xml"></include>
-	
-   <package name="burning-glass" extends="struts-default">
-   
-   	<interceptors>
-  		<interceptor name="myInterceptor" class="com.tengfeiyang.interceptor.MyInterceptor"></interceptor>
-  		
-  		<interceptor-stack name="myDefaultStack">
-  			<interceptor-ref name="myInterceptor"></interceptor-ref>
-  			<interceptor-ref name="defaultStack"></interceptor-ref>
-  		</interceptor-stack>
-  	</interceptors>
-   
-   	<action name="login" class="com.tengfeiyang.action.LoginAction">
-  		<result name="success">success.jsp</result>
-  		<result name="error">fail.jsp</result>
-  		<result name="input">login.jsp</result>
-  		<interceptor-ref name="myDefaultStack"></interceptor-ref>
-  	</action>
-  	
-  	<action name="register" class="com.tengfeiyang.action.RegisterAction">
-  		<result name="success">success.jsp</result>
-  		<result name="error">fail.jsp</result>
-  		<result name="input">register.jsp</result>
-  		<interceptor-ref name="myDefaultStack"></interceptor-ref>
-  	</action>
-  	
-  	<action name="career_test" class="com.tengfeiyang.action.CareerTestAction">
-  		<result name="success">success.jsp</result>
-  		<result name="error">fail.jsp</result>
-  		<result name="login">login.jsp</result>
-  		<interceptor-ref name="myDefaultStack"></interceptor-ref>
-  	</action>
-  	
-  		<action name="*_*" class="com.tengfeiyang.action.{1}Action" method="{2}">
-  		<result name="success">RESUME_MANAGE/success.jsp</result>
-  		<interceptor-ref name="myDefaultStack"></interceptor-ref>
-  	</action>
-   </package>
+
+	<package name="burning-glass" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="myInterceptor"
+				class="com.tengfeiyang.interceptor.MyInterceptor"></interceptor>
+
+			<interceptor-stack name="myDefaultStack">
+				<interceptor-ref name="myInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<action name="login" class="com.tengfeiyang.action.LoginAction">
+			<result name="success">success.jsp</result>
+			<result name="error">fail.jsp</result>
+			<result name="input">login.jsp</result>
+			<interceptor-ref name="myDefaultStack"></interceptor-ref>
+		</action>
+
+		<action name="register" class="com.tengfeiyang.action.RegisterAction">
+			<result name="success">success.jsp</result>
+			<result name="error">fail.jsp</result>
+			<result name="input">register.jsp</result>
+			<interceptor-ref name="myDefaultStack"></interceptor-ref>
+		</action>
+
+		<action name="career_test" class="com.tengfeiyang.action.CareerTestAction">
+			<result name="success">success.jsp</result>
+			<result name="error">fail.jsp</result>
+			<result name="login">login.jsp</result>
+			<interceptor-ref name="myDefaultStack"></interceptor-ref>
+		</action>
+
+		<!-- 通配符 -->
+		<!-- <action name="*_*" class="com.tengfeiyang.action.{1}Action" method="{2}"> 
+			<result name="success">RESUME_MANAGE/success.jsp</result> <interceptor-ref 
+			name="myDefaultStack"></interceptor-ref> </action> -->
+
+		<!-- 动态方法调用 -->
+		<action name="Resume" class="com.tengfeiyang.action.ResumeAction">
+			<result name="success">RESUME_MANAGE/success.jsp</result>
+			<interceptor-ref name="myDefaultStack"></interceptor-ref>
+		</action>
+		
+		<action name="ApplicationLetter" class="com.tengfeiyang.action.ApplicationLetterAction">
+			<result name="success">RESUME_MANAGE/success.jsp</result>
+			<interceptor-ref name="myDefaultStack"></interceptor-ref>
+		</action>
+	</package>
 </struts>
