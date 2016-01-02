@@ -39,7 +39,7 @@
   		<interceptor-ref name="myDefaultStack"></interceptor-ref>
   	</action>
   	
-  		<action name="resume_*" class="com.tengfeiyang.action.ResumeManageAction" method="{1}">
+  		<action name="*_*" class="com.tengfeiyang.action.{1}Action" method="{2}">
   		<result name="success">RESUME_MANAGE/success.jsp</result>
   		<interceptor-ref name="myDefaultStack"></interceptor-ref>
   	</action>
