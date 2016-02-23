@@ -42,6 +42,12 @@
 			<result name="login">login.jsp</result>
 			<interceptor-ref name="myDefaultStack"></interceptor-ref>
 		</action>
+		
+		<action name="java" class="com.tengfeiyang.action.JavaAction">
+			<result name="java">selectjava.jsp</result>
+			<result name="error">fail.jsp</result>
+			<result name="login">login.jsp</result>
+		</action>
 
 		<!-- 通配符 -->
 		<!-- <action name="*_*" class="com.tengfeiyang.action.{1}Action" method="{2}"> 

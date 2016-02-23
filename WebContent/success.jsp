@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Success
+	Success<br>
+	<a href="career_test.jsp">职业测试</a>
 </body>
 </html>

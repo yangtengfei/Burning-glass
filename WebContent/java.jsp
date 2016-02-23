@@ -10,7 +10,7 @@
 <!-- 绝对路径：￥{pageContext.request.contextPath}/ -->
 职业分析<br>
 您感兴趣的职业为：<br>
-<form action="java" method="post">
+<form action="/analysereport/java" method="post">
 	<input type="checkbox" name="options" value="A"/>A Java
 	<input type="checkbox" name="options" value="B"/> B 大数据
 	<input type="submit" value="提交"/>
