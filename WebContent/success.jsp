@@ -8,6 +8,8 @@
 </head>
 <body>
 	Success<br>
-	<a href="career_test.jsp">职业测试</a>
+	<a href="career_test.jsp">职业测试</a><br>
+	<a href="fileDownload.action?fileName=Java">Java分析文档下载</a><br>
+	<a href="fileDownload.action?fileName=PHP">PHP分析文档下载</a>
 </body>
 </html>
