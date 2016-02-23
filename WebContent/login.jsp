@@ -11,8 +11,8 @@
 
 用户登录
 <s:form action="login" method="post">
-	<s:textfield name="userName" label="用户名"></s:textfield>
-	<s:textfield type="password" name="password" label="密码"></s:textfield>
+	<s:textfield name="user.userName" label="用户名"></s:textfield>
+	<s:textfield type="password" name="user.password" label="密码"></s:textfield>
 	<s:submit value="登录"></s:submit>
 </s:form>
 </body>

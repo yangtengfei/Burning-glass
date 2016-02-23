@@ -38,7 +38,6 @@ public class RegisterAction extends ActionSupport {
 			userService.saveUser(newUser);
 			return SUCCESS;
 		} else {
-			// 用户名已
 			return ERROR;
 		}
 	}

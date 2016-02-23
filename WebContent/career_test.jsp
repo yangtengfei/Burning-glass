@@ -11,8 +11,8 @@
 职业测试<br>
 朋友评价你是下者中的：<br>
 <form action="career_test" method="post">
-	<input type="checkbox" name="options" value="A"/>A 热情和敏感
-	<input type="checkbox" name="options" value="B"/> B 逻辑和明确
+	<input type="radio" name="options" value="A"/>A 热情和敏感
+	<input type="radio" name="options" value="B"/> B 逻辑和明确
 	<input type="submit" value="提交"/>
 </form>
 </body>

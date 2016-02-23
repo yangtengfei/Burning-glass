@@ -10,17 +10,16 @@ import com.tengfeiyang.util.DBUtil;
 public class UserServiceImpl implements UserService {
 
 	private SessionFactory sessionFactory = DBUtil.getSessionFactory();
-
+	Session session = sessionFactory.openSession();
+	
 	@Override
 	// 登录：检查是否存在该用户
 	public User getUser(String userName, String password) {
-		User user = new User();
-		if ("张三".equals(userName) && "zhangsan".equals(password)) {
-			user.setId(1);
-			user.setUserName("张三");
-			user.setPassword("zhangsan");
-			user.setEmail("zhangsan@163.com");
-		} else {
+		String hql="from User user where user.userName=:username";
+		session.beginTransaction();
+		User user = (User) session.createQuery(hql).setParameter("username", userName).uniqueResult();
+		session.close();
+		if (!password.equals(user.getPassword())) {
 			user = null;
 		}
 		return user;
@@ -29,8 +28,10 @@ public class UserServiceImpl implements UserService {
 	@Override
 	// 注册：检查用户名是否重复
 	public User getUser(String userName) {
-		User user = new User();
-		user = null;
+		String hql="from User user where user.userName=:username";
+		session.beginTransaction();
+		User user = (User) session.createQuery(hql).setParameter("username", userName).uniqueResult();
+		session.close();
 		return user;
 	}
 

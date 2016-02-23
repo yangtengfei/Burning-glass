@@ -25,6 +25,7 @@ public class LoginAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 		// 检查是否有该用户
+		System.out.println(user.getUserName() + " " + user.getPassword());
 		User user1 = userService.getUser(user.getUserName(), user.getPassword());
 		if (user1 != null) {
 			return SUCCESS;

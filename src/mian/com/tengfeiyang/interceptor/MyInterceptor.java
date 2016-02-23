@@ -22,12 +22,9 @@ public class MyInterceptor extends AbstractInterceptor {
 
 	@Override
 	public String intercept(ActionInvocation invocation) throws Exception {
-		System.out.println("Action执行前");
-		
 		String result = invocation.invoke();
 		System.out.println("result:" + result);
 		
-		System.out.println("Action执行后");
 		return result;
 	}
 
