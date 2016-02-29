@@ -15,20 +15,11 @@
 	<br>
 	<br>
 	<br>
-	<div class="h1">
-	<h1 align="center">欢迎来到本网站,请先登录或注册~</h1>
-	</div>
-	<br>
-	<br>
-	<br>
-	<div class="zhuce" align="center">
-		用户登录
-		<s:form action="login" method="post">
-			<s:textfield name="user.userName" label="用户名"></s:textfield>
-			<s:textfield type="password" name="user.password" label="密码"></s:textfield>
-			<s:submit value="登录"></s:submit>
-			<s:submit value="注册" name="action:register"></s:submit>
-		</s:form>
+	<div class="h1" align="center" style="height: 361px; width: 985px; ">
+	<h1>职业分析</h1>
+	<h1 class="welcome"></h1>
+	<h3 >结果文档下载</h3>
+	<a href=fileDownload.action?fileName=Java">Java分析文档下载</a><br>
 	</div>
 </body>
 </html>

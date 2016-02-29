@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+body{
+	font-family : Verdana,Geneva,Arial,sans-serif;
+	top : 0px;
+}
+h1.zhiye{
+	border-bottom: thin dotted #888888;
+	border-color:black;
+}

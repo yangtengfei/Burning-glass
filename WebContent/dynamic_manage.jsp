@@ -8,6 +8,7 @@
 </head>
 <!-- 验证动态方法调用,此方法有SQL注入的风险 -->
 <body>
+	<jsp:include page="head.jsp" />
 	<h1>第一步method通配符：简历管理</h1>
 	<!-- target定义文档在何处显示，新窗口或本页面 -->
 	<a href="Resume!list" target="_blank">简历信息查询</a>&nbsp;

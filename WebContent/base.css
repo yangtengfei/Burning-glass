@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+body {
+	font-family:Verdana,Geneva,Arial,sans-serif;
+	background-color: #CCFFFF;
+}
+div.head1{
+	width: 100%;
+	border-bottom: thin dotted #888888;
+	margin:14px 0;
+	display:inline-block;
+	background-color : #ffffcc;
+}
+div.h1 {
+	font-size:150%;
+	border-bottom: thin dotted #888888;
+	padding:25px;
+	margin:30px;
+	border-color:black;
+	border-width:1px;
+	border-style:solid;
+	background-color: #ccccff;
+	background-image: url(background.gif);
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+div.base{
+	font-size:150%;
+	color:#444444;
+	border-color:black;
+	border-width:1px;
+	border-style:solid;
+	background-color:#ccff99;
+	padding:25px;
+	margin:30px;
+}
+div.zhuce,div.register{
+	font-size:200%;
+	color:#444444;
+	border-color:black;
+	border-width:1px;
+	border-style:solid;
+	background-color:#ccff99;
+	padding:25px;
+	margin:30px;
+}
+.jlgl,.qzxgl{
+	border-bottom: thin dotted #888888;
+	padding:25px;
+	margin:30px;
+	border-color:black;
+	border-width:1px;
+	border-style:solid;
+	background-color: #ccccff;
+}
+h1.resume,h1.welcome{
+	border-bottom: thin dotted #888888;
+}
+.success{
+	font-size:200%;
+	color:#444444;
+	border-color:black;
+	border-width:1px;
+	border-style:solid;
+	background-color:#ccff99;
+	padding:25px;
+	margin:30px;
+}

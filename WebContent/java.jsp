@@ -7,6 +7,7 @@
 <title>Burning-Glass</title>
 </head>
 <body>
+	<jsp:include page="head.jsp" />
 <!-- 绝对路径：￥{pageContext.request.contextPath}/ -->
 职业分析<br>
 您感兴趣的职业为：<br>
