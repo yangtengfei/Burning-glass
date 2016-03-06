@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    <link type="text/css" rel="stylesheet" href="base.css">
+    <link type="text/css" rel="stylesheet" href="css/base.css">
     <title>My JSP 'index.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">

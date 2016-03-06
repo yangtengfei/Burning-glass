@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>简历管理</title>
-<link type="text/css" rel="stylesheet" href="base.css">
+<link type="text/css" rel="stylesheet" href="css/base.css">
 </head>
 <body>
 	<div class="head1">

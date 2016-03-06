@@ -8,10 +8,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
 <base href="<%=basePath%>">
-<link type="text/css" rel="stylesheet" href="head.css">
+<link type="text/css" rel="stylesheet" href="css/head.css">
+<link type="text/css" rel="stylesheet " href="css/bootstrap.css">
+<script src="js/bootstrap.js"></script>
 </head>
 
 <body>
+
 	<div align="center">
 		<h2>基于大数据平台的软件工程</h2>
 		<h1>职业分析</h1>
@@ -19,5 +22,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<h3>指导老师:吴桂兴</h3>
 		<h3>设计人:杨腾飞,张凯文,康晓领</h3>
 	</div>
+	<button type="button" class="btn btn-primary">登录</button>
 </body>
 </html>
